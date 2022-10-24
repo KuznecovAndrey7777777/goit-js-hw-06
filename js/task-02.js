@@ -32,24 +32,29 @@ const ingredients = [
   'Condiments',
 ];
 
-const list = document.querySelector("#ingredients");
-const liArray = [];
+const allIngredients = document.querySelector("#ingredients");
 
-ingredients.forEach((ingredient) => {
-  const item = document.createElement("li");
-  item.className = "item";
-  item.textContent = ingredient;
-  liArray.push(item);
+const liArray = ingredients.map((item) => {
+  const createIngredient = document.createElement("li");
+  createIngredient.textContent = item;
+  return createIngredient;
 });
 
-list.append(...liArray);
+allIngredients.append(...liArray);
 
 
+// const list = document.querySelector("#ingredients");
+// const liArray = [];
 
-// const ulElement = document.querySelector("#ingredients");
+// ingredients.forEach((ingredient) => {
+//   const item = document.createElement("li");
+//   item.className = "item";
+//   item.textContent = ingredient;
+//   liArray.push(item);
+// });
 
-// const list = ingredients.reduce((line, item) =>
-// line + `<li>${item}</li>`, "");
-// ulElement.innerHTML = list;
+// list.append(...liArray);
+
+
 
 
